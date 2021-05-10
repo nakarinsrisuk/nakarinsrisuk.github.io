@@ -16,12 +16,12 @@ body {
 }
 ::selection {
 	color: #fff;
-	background: #5887FF;
+	background: #F2AF5C;
 }
 
 ::-moz-selection {
  color: #fff;
- background: #5887FF;
+ background: #F2AF5C;
 }
 p {
 	color: #858585;
@@ -125,8 +125,8 @@ h2 {
 	top: 0px;
 }
 .navbar-inverse .navbar-toggle {
-	border-color: #5887FF;
-	background-color: #5887FF;
+	border-color: None;
+	background-color: None;
 }
 .header .navbar {
 	margin: 0;
@@ -136,7 +136,7 @@ h2 {
 /*background-color: #5887FF;*/;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-	background: #5887FF;
+	background: #F2AF5C;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
 	color: #fff;
@@ -151,7 +151,7 @@ h2 {
 	color: #FFFFFF;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-	color: #5887FF;
+	color: #F2AF5C;
 	background: none;
 }
 .navbar-toggle {
