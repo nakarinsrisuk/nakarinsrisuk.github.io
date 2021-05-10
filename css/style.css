@@ -433,6 +433,11 @@ p {
     color: #000000;
 }
 
+.top_left_cont h2 strong {
+    font-weight: 700;
+    color: #F2AF5C;
+}
+
 .top_left_cont p {color: #000;margin: 0 0 40px 0;line-height: 24px;font-size: 15px;text-align: right;letter-spacing: 1px;font-weight: normal;}
 
 a.read_more, a.read_more2 {
