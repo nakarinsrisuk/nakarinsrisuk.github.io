@@ -1,151 +1,152 @@
-// Custom Script
-// Developed by: Samson.Onna
-var customScripts = {
-    profile: function () {
-        // portfolio
-        if ($('.isotopeWrapper').length) {
-            var $container = $('.isotopeWrapper');
-            var $resize = $('.isotopeWrapper').attr('id');
-            // initialize isotope
-            $container.isotope({
-                itemSelector: '.isotopeItem',
-                resizable: false, // disable normal resizing
-                masonry: {
-                    columnWidth: $container.width() / $resize
-                }
-            });
-            $("a[href='#top']").click(function () {
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-                return false;
-            });
-            $('.navbar-inverse').on('click', 'li a', function () {
-                $('.navbar-inverse .in').addClass('collapse').removeClass('in').css('height', '1px');
-            });
-            $('#filter a').click(function () {
-                $('#filter a').removeClass('current');
-                $(this).addClass('current');
-                var selector = $(this).attr('data-filter');
-                $container.isotope({
-                    filter: selector,
-                    animationOptions: {
-                        duration: 1000,
-                        easing: 'easeOutQuart',
-                        queue: false
-                    }
-                });
-                return false;
-            });
-            $(window).smartresize(function () {
-                $container.isotope({
-                    // update columnWidth to a percentage of container width
-                    masonry: {
-                        columnWidth: $container.width() / $resize
-                    }
-                });
-            });
-        }
-    },
-    fancybox: function () {
-        // fancybox
-        $(".fancybox").fancybox();
-    },
-    onePageNav: function () {
+/*
+Author URI: http://webthemez.com/
+Note: 
+Licence under Creative Commons Attribution 3.0 
+Do not remove the back-link in this web template 
+-------------------------------------------------------*/
 
-        		if($('#main-nav ul li:first-child').hasClass('active')){
-					$('#main-nav').css('background','none');
-		}
-        $('#mainNav').onePageNav({        
-            currentClass: 'active',
-            changeHash: false,
-            scrollSpeed: 950,
-            scrollThreshold: 0.2,
-            filter: '',
-            easing: 'swing',
-            begin: function () {
-                //I get fired when the animation is starting
-				
-            },
-            end: function () {
-                //I get fired when the animation is ending
-				if(!$('#main-nav ul li:first-child').hasClass('active')){
-					$('.header').addClass('addBg');					
-				}else{
-						$('.header').removeClass('addBg');
-				}
-				
-            },
-            scrollChange: function ($currentListItem) {
-                //I get fired when you enter a section and I pass the list item of the section
-				if(!$('#main-nav ul li:first-child').hasClass('active')){
-					$('.header').addClass('addBg');
-				}else{
-						$('.header').removeClass('addBg');
-				}
-            }
-        });
-    },
-    slider: function () {
-        $('#da-slider').cslider({
-            autoplay: true,
-            bgincrement: 0
-        });
-    },
-    owlSlider: function () {
-        var owl = $("#owl-demo");
-        owl.owlCarousel();
-        // Custom Navigation Events
-        $(".next").click(function () {
-            owl.trigger('owl.next');
-        })
-        $(".prev").click(function () {
-            owl.trigger('owl.prev');
-        })
-    },
-    bannerHeight: function () {
-        var bHeight = $(".banner-container").height();
-        $('#da-slider').height(bHeight);
-        $(window).resize(function () {
-            var bHeight = $(".banner-container").height();
-            $('#da-slider').height(bHeight);
-        });
-    },
-    init: function () {
-        customScripts.onePageNav();
-        customScripts.profile();
-        customScripts.fancybox();
-        customScripts.slider();
-        customScripts.owlSlider();
-        customScripts.bannerHeight();
-    }
-}
-$('document').ready(function () {
-    customScripts.init();
-	$('#diagram-id-1').diagram({ 
-			size: "190",
-			borderWidth: "10",
-			bgFill: "#95a5a6",
-			frFill: "#3498db",
-			textSize: 54,
-			textColor: '#1a1a1a'
-		}); 
-		$('#diagram-id-2').diagram({ 
-			size: "190",
-			borderWidth: "10",
-			bgFill: "#95a5a6",
-			frFill: "#3498db",
-			textSize: 54,
-			textColor: '#333'
-		});
-
-		$('#diagram-id-3').diagram({ 
-			size: "190",
-			borderWidth: "10",
-			bgFill: "#95a5a6",
-			frFill: "#3498db",
-			textSize: 54,
-			textColor: '#1a1a1a'
-		});
-		$(window).load(function() { 
-			  $('#filter .current').trigger('click');
-		});
+$(window).load(function() {
+    jQuery('#all').click();
+    return false;
 });
+
+$(document).ready(function() {
+    $('#header_wrapper').scrollToFixed();
+    $('.res-nav_click').click(function() {
+        $('.main-nav').slideToggle();
+        return false
+
+    });
+	 
+	$('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show'); 
+
+	$( window ).scroll(function() {   
+	// if($( window ).scrollTop() > 10){   scroll down abit and get the action   
+	$(".progress-bar").each(function(){
+	each_bar_width = $(this).attr('aria-valuenow');
+	$(this).width(each_bar_width + '%');
+	});
+	   
+	//  }  
+	});
+
+    function resizeText() {
+        var preferredWidth = 767;
+        var displayWidth = window.innerWidth;
+        var percentage = displayWidth / preferredWidth;
+        var fontsizetitle = 25;
+        var newFontSizeTitle = Math.floor(fontsizetitle * percentage);
+        $(".divclass").css("font-size", newFontSizeTitle)
+    }
+    if ($('#main-nav ul li:first-child').hasClass('active')) {
+        $('#main-nav').css('background', 'none');
+    }
+    $('#mainNav').onePageNav({
+        currentClass: 'active',
+        changeHash: false,
+        scrollSpeed: 950,
+        scrollThreshold: 0.2,
+        filter: '',
+        easing: 'swing',
+        begin: function() {
+        },
+        end: function() {
+            if (!$('#main-nav ul li:first-child').hasClass('active')) {
+                $('.header').addClass('addBg');
+            } else {
+                $('.header').removeClass('addBg');
+            }
+
+        },
+        scrollChange: function($currentListItem) {
+            if (!$('#main-nav ul li:first-child').hasClass('active')) {
+                $('.header').addClass('addBg');
+            } else {
+                $('.header').removeClass('addBg');
+            }
+        }
+    });
+
+    var container = $('#portfolio_wrapper');
+
+
+    container.isotope({
+        animationEngine: 'best-available',
+        animationOptions: {
+            duration: 200,
+            queue: false
+        },
+        layoutMode: 'fitRows'
+    });
+
+    $('#filters a').click(function() {
+        $('#filters a').removeClass('active');
+        $(this).addClass('active');
+        var selector = $(this).attr('data-filter');
+        container.isotope({
+            filter: selector
+        });
+        setProjects();
+        return false;
+    });
+
+    function splitColumns() {
+        var winWidth = $(window).width(),
+            columnNumb = 1;
+
+
+        if (winWidth > 1024) {
+            columnNumb = 4;
+        } else if (winWidth > 900) {
+            columnNumb = 2;
+        } else if (winWidth > 479) {
+            columnNumb = 2;
+        } else if (winWidth < 479) {
+            columnNumb = 1;
+        }
+
+        return columnNumb;
+    }
+	
+    function setColumns() {
+        var winWidth = $(window).width(),
+            columnNumb = splitColumns(),
+            postWidth = Math.floor(winWidth / columnNumb);
+
+        container.find('.portfolio-item').each(function() {
+            $(this).css({
+                width: postWidth + 'px'
+            });
+        });
+    }
+
+    function setProjects() {
+        setColumns();
+        container.isotope('reLayout');
+    }
+
+    container.imagesLoaded(function() {
+        setColumns();
+    });
+
+
+    $(window).bind('resize', function() {
+        setProjects();
+    });
+
+   $(".fancybox").fancybox();
+});
+
+wow = new WOW({
+    animateClass: 'animated',
+    offset: 100
+});
+wow.init();
+document.getElementById('').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'wow fadeInDown';
+    section.className = 'wow shake';
+    section.className = 'wow zoomIn';
+    section.className = 'wow lightSpeedIn';
+    this.parentNode.insertBefore(section, this);
+};

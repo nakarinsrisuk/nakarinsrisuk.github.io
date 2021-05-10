@@ -1,30 +1,24 @@
-Note
-====
-Free-Portfolio-HTML5-Responsive-Website-Sam
+Free Site License:
+------------------
 
-Sam Doe is a clean, modern and responsive professional looking resume / personal portfolio template for all designer and developer. well crafted Designed for user experience on mulit devices like desktop, laptop, smartphones. This template is built on Bootstrap framework which give flexibilty to customeise the theme easly as per the your requirements. Included with all latest technology HTML5 CSS3, jQuery and bootstrap.
+CC 3.0 All of the site templates we create for WebThemez are licensed under the Creative Commons Attribution 4.0 License, which means you can:
+ - You can use our templates for both personal and commercial projects. 
+ - You are NOT allowed to remove the back link to WebThemez.com in templates unless you purchased a license. 
+ - You can update /modify/customize the website to fit your project needs. 
+ - You cannot claim credit or ownership for any of the files found on webthemez.com. 
+ - You cannot redistribute, resell, license, or sub-license any of the files found on webthemez.com. 
 
-
-Key features
-Twitter Bootstrap 3.2.0
-Valid HTML5 & CSS3
-FontAwesome Icons
-Gallery
-Fully Responsive
-Browser Compatability
-Contact Form
-
-Responsive, Bootstrap Mobile First Web Template
- 
-Author URI: http://webthemez.com/
-
-License: Free to use for personal and commercial, but you need to place back link in the bottom of the template(Template by: webthemez.com).
+ - No Support
+ - No Php files ( contact form does not work)
+ - No Updates
 
 
-Credits
-=======
-Framework  http://getbootstrap.com
-Images	Unsplash (http://unsplash.com - CC0 licensed) 
-Icons	Font Awesome (http://fortawesome.github.com/Font-Awesome/)
-Other	html5shiv.js (@afarkas @jdalton @jon_neal @rem)
+Credits :
+--------- 
 
+=> Design & developed: "WebThemez"  http://webthemez.com 
+=> Bootstrap : http://getbootstrap.com/
+=> Fontawesome : https://fortawesome.github.io/Font-Awesome/
+=> Fonts : https://www.google.com/fonts
+=> Images : https://unsplash.com/ , https://www.pexels.com/ and https://pixabay.com/
+=> Carousel : http://owlgraphic.com/owlcarousel/
