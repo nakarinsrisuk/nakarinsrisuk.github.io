@@ -433,7 +433,7 @@ p {
     color: #000000;
 }
 
-.top_left_cont h2 strong {
+.top_left_cont h2 strong mark.yellow {
     font-weight: 700;
     color: #F2AF5C;
 }
